@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "e0467c73-d58d-40ae-98e8-a75ce9bc265d",
+		"name": "KovTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Mita Jane",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "mita",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rahasia",
+							"type": "text"
+						},
+						{
+							"key": "deviceId",
+							"value": "321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}user/register",
+					"host": [
+						"{{baseurl}}user"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Session",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "b90e97bf-fa10-482d-a5e5-a4267ee85eee",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}auth",
+					"host": [
+						"{{baseurl}}auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dhani",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rahasia",
+							"type": "text"
+						},
+						{
+							"key": "deviceId",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}auth/login",
+					"host": [
+						"{{baseurl}}auth"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pass User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "b90e97bf-fa10-482d-a5e5-a4267ee85eee",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "meetDeviceId",
+							"value": "122",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}user/pass",
+					"host": [
+						"{{baseurl}}user"
+					],
+					"path": [
+						"pass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suspect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "b90e97bf-fa10-482d-a5e5-a4267ee85eee"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{baseurl}}user/suspect",
+					"host": [
+						"{{baseurl}}user"
+					],
+					"path": [
+						"suspect"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
